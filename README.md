@@ -24,6 +24,14 @@ PEAK VISION is a study management platform built using Flask and MySQL.
 
 Version 1 (V1) Completed
 
+## Future Enhancements (V2)
+
+- AI-generated flashcards
+- Weak subject prediction
+- User authentication
+- Dashboard analytics
+- Personalized study recommendations
+  
 ## Author
 
 Anshul Reddy
