@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Notes</title>
+    <!--<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"-->
+</head>
+<body>
+    <h1>All Notes</h1>
+    {% for note in notes %}
+        <p>ID: {{ note[0] }}</p>
+        <h3>Subject: {{ note[1] }}</h3>
+        <p>{{ note[2] }}</p>
+        <P>Created: {{ note[3] }}</P>
+        <a href="/delete_note/{{ note[0] }}">
+            <button>Delete</button>
+        </a>
+        <a href="/edit_note/{{ note[0] }}">
+            <button>Edit</button>
+        </a>
+        <hr>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <h1>Notes Section</h1>
+    {% if message %}
+        <h3>Message = {{message}}</h3><!--Jinja Template variable-->
+    {% endif %}
+    <h3>Add a Note</h3>
+    <form method="POST">
+        <input type="text" name="subject" placeholder="Enter Subject">
+        <br><br>
+
+        <textarea name="note" rows="10" cols="50" placeholder="Write your Notes Here.">
+        </textarea>
+        <br><br>
+        <button type="submit">Save Note</button>
+        <a href="/view_notes">
+            <button type="button">View Notes</button>
+        </a>
+    </form>
+</body>
+</html>
